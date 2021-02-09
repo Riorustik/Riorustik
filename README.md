@@ -1,37 +1,70 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="aa">
+        <p>HEllo</p>
+        <button type='submit' id="key" onclick="" >ddd</button>
 
-You can use the [editor on GitHub](https://github.com/RioRustik/RioRustik/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+    </div>  
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+    <div class="bb">
+        <p>rrrrr</p>
+        <button type='submit' id="key1" onclick="" >rrr</button>
+    </div>   
 
-### Markdown
+    <div class="ff">
+        <p>QQQQQQQQQQQ</p>
+    </div> 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    
+    <!-- <header>
 
-```markdown
-Syntax highlighted code block
+    </header>
+    <main>
 
-# Header 1
-## Header 2
-### Header 3
+    </main>
+    <footer>
 
-- Bulleted
-- List
+    </footer>     -->
+</body>
+<script>
+  window.onload = function(){
+        if(sessionStorage.getItem("most1")!==null || sessionStorage.getItem("most2")!==null){
+            let text = sessionStorage.getItem("most1");
+            document.getElementsByClassName("bb")[0].classList.remove(text);
+        }
+        if(sessionStorage.getItem("most2")!==null){
+            let text1 = sessionStorage.getItem("most2");
+            document.getElementsByClassName("ff")[0].classList.add(text1);
+        }
+        if(sessionStorage.getItem("most2")!==null){
+            let text3 = sessionStorage.getItem("most4");
+            document.getElementsByClassName("aa")[0].classList.add(text3);
+        }
+    }
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RioRustik/RioRustik/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+    document.getElementById("key").onclick = function() {
+        if(document.getElementById('key').onclick) {
+            document.getElementsByClassName("bb")[0].classList.add("cc");
+            document.getElementsByClassName("aa")[0].classList.add("vv");
+            sessionStorage.setItem('most4', "vv"); 
+   
+        }   
+    }
+    document.getElementById("key1").onclick = function() {
+        if(document.getElementById('key1').onclick){
+            document.getElementsByClassName("bb")[0].classList.remove("cc");
+            sessionStorage.setItem('most1', "cc"); 
+            document.getElementsByClassName("ff")[0].classList.add("ee");          
+            sessionStorage.setItem('most2', "ee"); 
+        }  
+    }
+</script>
+</html>

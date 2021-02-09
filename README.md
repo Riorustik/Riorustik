@@ -6,23 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
     <title>Document</title>
+    <style>
+button {
+    margin:0 auto;
+    display: flex;
+    background: #c0c0c098;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 25px;
+    min-width: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    cursor: none;
+}
+.aa{
+    display:  flex;
+    background-color: aqua;
+}
+.vv{
+    display:  none;
+}
+.bb, .ff{
+    display: none;  
+}
+.cc{
+    display: flex;
+    background-color: rebeccapurple;
+}
+.ee{
+    display:  flex;
+    background-color: rgb(69, 119, 41);
+}</style>
 </head>
 <body>
     <div class="aa">
         <p>HEllo</p>
         <button type='submit' id="key" onclick="" >ddd</button>
-
     </div>  
-
     <div class="bb">
         <p>rrrrr</p>
         <button type='submit' id="key1" onclick="" >rrr</button>
     </div>   
-
     <div class="ff">
         <p>QQQQQQQQQQQ</p>
-    </div> 
-
+    </div>
     
     <!-- <header>
 
@@ -49,13 +76,11 @@
             document.getElementsByClassName("aa")[0].classList.add(text3);
         }
     }
-
     document.getElementById("key").onclick = function() {
         if(document.getElementById('key').onclick) {
             document.getElementsByClassName("bb")[0].classList.add("cc");
             document.getElementsByClassName("aa")[0].classList.add("vv");
             sessionStorage.setItem('most4', "vv"); 
-   
         }   
     }
     document.getElementById("key1").onclick = function() {

@@ -1,3 +1,8 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
 button {
     margin:0 auto;
     display: flex;
@@ -11,25 +16,20 @@ button {
     cursor: none;
 }
 
-.aa{
+.firstPopupBlock{
     display:  flex;
     background-color: aqua;
 }
-.vv{
+.hideFirstBlock, .hideSecondBlock, .hideThirdBlock{
     display:  none;
 
 }
-.bb, .ff{
-    display: none;
-   
-}
-
-.cc{
+.secondPopupBlock{
     display: flex;
     background-color: rebeccapurple;
 }
 
-.ee{
+.thirdPopupBlock{
     display:  flex;
     background-color: rgb(69, 119, 41);
 }

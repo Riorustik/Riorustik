@@ -4,18 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/popup.style.css">  
     <title>Document</title>
 </head>
 <body>   
-    <div class="firstPopupBlock">
-        <p>HEllo</p>
-        <button type='submit' id="key" onclick="" >ddd</button>
-    </div>  
-    <div class="hideSecondBlock">
-        <p>rrrrr</p>
-        <button type='submit' id="key1" onclick="" >rrr</button>
-    </div>   
+    <div class="wrap">
+        <div class="secondPopupBlock">
+                <div class="bl1">
+                    <h3>ДОбро пожаловать на сайт посященный JS</h3>
+                    <p>Здесь вы узнаете общие сведения о JS</p>
+                    <form class="f1" id="name" action="#" method="GET" >
+                        <fieldset form="name" name="userName">
+                            <input type="text" autocomplete="on" autofocus form="name" placeholder="Имя">
+                            <input type="text" autocomplete="on" form="name" placeholder="Фамилия">
+                            <button type="button" class="btn btn-default" data-modal="modal_1">rrr</button>
+                        </fieldset>
+                        
+                    </form>
+                    
+                </div>
+
+                <div class="bl2">
+                    <h3>ДОбро пожаловать на сайт посященный JS</h3>
+                    <p>Здесь вы узнаете общие сведения о JS</p>
+                    <form class="f1" id="name" action="#" method="GET" >
+                        <fieldset form="name" name="userName">
+                            <input type="text" autocomplete="on" autofocus form="name" placeholder="Имя">
+                            <input type="text" autocomplete="on" form="name" placeholder="Фамилия">
+                            <button type="button" class="btn btn-default" data-modal="modal_1">rrr</button>
+                        </fieldset>
+                </div>  
+            
+                        <div class="overlay" data-close=""></div>
+                        <div id="modal_1" class="dlg-modal">
+                            <h3>Всплывающее окно 1</h3>
+                            <button type="button" class="btn btn-default" id="key1" onclick="" >ttt</button>
+                        </div>    
+        </div>   
+    </div>
 
     <div class="hideThirdBlock">
         <header>
@@ -33,5 +60,7 @@
     </div> 
          
 </body>
+<script>var typeAnimate = 'fade';</script>
+<script src="js/popup-css3.function.js"></script>
     <script src="js/popupBlock.js"></script>
 </html>

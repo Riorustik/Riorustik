@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
     <title>Document</title>
-    <style>
+    <style type="text/css">
 button {
     margin:0 auto;
     display: flex;

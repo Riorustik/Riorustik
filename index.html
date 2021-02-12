@@ -4,63 +4,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/popup.style.css">  
     <title>Document</title>
 </head>
 <body>   
-    <div class="wrap">
-        <div class="secondPopupBlock">
-                <div class="bl1">
-                    <h3>ДОбро пожаловать на сайт посященный JS</h3>
-                    <p>Здесь вы узнаете общие сведения о JS</p>
-                    <form class="f1" id="name" action="#" method="GET" >
-                        <fieldset form="name" name="userName">
-                            <input type="text" autocomplete="on" autofocus form="name" placeholder="Имя">
-                            <input type="text" autocomplete="on" form="name" placeholder="Фамилия">
-                            <button type="button" class="btn btn-default" data-modal="modal_1">rrr</button>
-                        </fieldset>
-                        
-                    </form>
-                    
+    <div class="startPage">
+        <div class="mainStartingBlock" >
+                <div class="leftStartsBlock">
+                    <h1>Руководство по </h1>
+                    <br>
+                    <h1>JavaScript</h1>
+                    <p style="margin: 30px 100px 0 0px;">Погружение в IT-профессию подразумевает постоянный 
+                        контакт с изучаемыми технологиями. Цель этого сайта 
+                        - предоставить как можно более грамотную и 
+                        структурированную информацию о языке JS.
+                        Здесь вы узнаете общие сведения о языке,
+                        зачем он нужен, для чего его можно использовать,
+                        в каких случаях этот язык не подойдет.
+                    </p>
+                    <p style="font-size: 12px; margin-top: 40px;">Для продолжения введите:</p>
+                    <div class="blockInputDataStartPage">
+                        <form id="formStartPage" class="formInputDataStartPage" action="#" method="GET" >
+                            <fieldset class="caseFormStartPage" form="name" name="userName">
+                                <input id="inputNameFormStartPage" class="fieldInput" type="text" name="name" autocomplete="on" autofocus form="formStartPage" placeholder="Имя" required>
+                                <input id="inputSurnameFormStartPage" class="fieldInput" type="text" name="surname" autocomplete="on" form="formStartPage" placeholder="Фамилия" required > 
+                            </fieldset>  
+                        </form>
+                        <input id="buttonFormInputDataStartPage" type="button" class="button" data-modal="idPopupBlockStartPage" form="formStartPage" value="продолжить" disabled>
+                    </div>
                 </div>
-
-                <div class="bl2">
-                    <h3>ДОбро пожаловать на сайт посященный JS</h3>
-                    <p>Здесь вы узнаете общие сведения о JS</p>
-                    <form class="f1" id="name" action="#" method="GET" >
-                        <fieldset form="name" name="userName">
-                            <input type="text" autocomplete="on" autofocus form="name" placeholder="Имя">
-                            <input type="text" autocomplete="on" form="name" placeholder="Фамилия">
-                            <button type="button" class="btn btn-default" data-modal="modal_1">rrr</button>
-                        </fieldset>
-                </div>  
-            
-                        <div class="overlay" data-close=""></div>
-                        <div id="modal_1" class="dlg-modal">
-                            <h3>Всплывающее окно 1</h3>
-                            <button type="button" class="btn btn-default" id="key1" onclick="" >ttt</button>
-                        </div>    
+                <div class="rightStartsBlock">
+                    <div class="blockImgStartPage"><img src="jsIcon2.png" alt="" width="85%"></div>
+                </div>
+                <div class="overlay" data-close="idPopupBlockStartPage"></div>
+                <div id="idPopupBlockStartPage" class="popupBlockStartPage">
+                        <h3>Добро подаловать </h3>
+                        <h4 id="popupBlockHiStartPage"></h4>
+                        <button id="popupBlockButtonStartPage" type="button" class="button" style="margin-top: 70px">продолжить</button>
+                </div>    
         </div>   
     </div>
-
-    <div class="hideThirdBlock">
+    <div class="hideFirstBlock">
         <header>
-
+            <p id="blockUp1"></p>
+            <div>описание</div>   
+            <div>навигация</div>
         </header>
-        <main>
-    
+        <main style="display: flex; flex-direction: column;">
+            <div>
+                <p>1</p>
+                <form action="#" id="ff22">
+                    <p>Введите основание и высоту треугольника:</p>
+                    <input id="s1" type="text" placeholder="Основание" required form="ff22" required>
+                    <input id="s2" type="text" placeholder="Высота" required form="ff22" required>
+                    <input id="s3" type="button" form="ff22" style="width: 100px;" value="вычилить">
+                    <div style="display: flex; flex-direction: row;">
+                        <p style="margin-right: 5px">Площадь: 
+                            <p id="s4"></p>
+                        </p>
+                    </div>  
+                </form>
+            </div>
+            <div>
+                <p>2</p>
+                <form action="#" id="ff33">
+                    <p>Заполните поля:</p>
+                    <input id="d1" type="text" placeholder="Строка 1" required form="ff33" required>
+                    <input id="d2" type="text" placeholder="Строка 2" required form="ff33" required>
+                    <input id="d3" type="button" form="ff33" style="width: 100px;" value="сравнить">
+                    <div style="display: flex; flex-direction: row;">
+                        <p style="margin-right: 5px">Результат равенства строк: 
+                            <p id="d4" ></p>
+                        </p>
+                    </div>  
+                </form>
+            </div>
+            <div>
+                <p>3</p>
+                <form action="#" id="ff44">
+                    <input id="m3" type="button" form="ff44" style="width: 100px;" value="вести массив">
+                    <div style="display: flex; flex-direction: column;">
+                        <p  style="margin-right: 5px;">Наибольщий элемент массива:
+                            <span id="m4" ></span>
+                        </p>
+                        <p style="margin-right: 5px;">Наименьший элемент массива: 
+                            <span id="m5"></span>
+                        </p>
+                    </div>  
+                </form>
+            </div>
+            <div></div>
+            <div ></div>
+            <div>
+                <div class="overlay1" data-close="">
+                    <div id="current"></div>
+                    <div id="blockUp12"></div>
+                </div>
+                <input id="zaz" type="button" class="button" data-modal="modal_11"  value="продолжить">
+            </div>
+            </div>
     
         </main>
         
         <footer>
     
         </footer>
-        <p>QQQ</p>
-    </div> 
-         
+
+    </div>    
 </body>
-<script>var typeAnimate = 'fade';</script>
-<script src="js/popup-css3.function.js"></script>
+    <!-- <script>var typeAnimate = 'fade';</script> -->
+    <script src="js/popup-css3.function.js"></script>
     <script src="js/popupBlock.js"></script>
+    <script src="landing.js"></script>
+    <script src="js/popup-css3unction1.js"></script>
 </html>

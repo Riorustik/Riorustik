@@ -1,8 +1,5 @@
-/* reset */
 html, body, div, span, h1, h2, h3, p, ul, li {
-	margin: 0; 
-	padding: 0; 
-	border: 0; 
+	margin: 0; padding: 0; 	border: 0; 
 	vertical-align: baseline;
 }
 *, :after, :before {
@@ -11,106 +8,155 @@ html, body, div, span, h1, h2, h3, p, ul, li {
 	padding: 0; 
 	margin: 0;
 }
-ol, ul {
-	list-style: none; 
-	display: block;
-}
 a, button, div, input, select, textarea, :focus, :active {
 	outline: none;
 }
-
-/* grid */
-html, body, .wrap {
-	height: 100%; 
-	/* line-height: 1; */
+html, body, .startPage {
+	height: 100vh; 
 }
-.wrap {
-	/* max-width: 1024px;  */
-	position: relative; 
-	/* margin: 0 auto;  */
-	/* padding: 50px 24px 36px; */
-}
-
-/* typography */
 body {
 	font-size: 16px; 
 	line-height: 24px; 
 	font-family: 'Roboto', sans-serif; 
-	color: #333;
+	color: rgb(241, 225, 1);
+}
+.hideFirstBlock{
+    display:  none;
+}
+.mainStartingBlock{
+	width: 100%;
+	height: 100%;
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.leftStartsBlock{
+	width: 60%;
+	padding: 50px 20px 50px 20px; 
+	height: 100%;
+	display: flex;
+	background-color: rgb(0, 0, 0);
+	flex-direction: column;
+	min-width: 400px;
+}
+.leftStartsBlock{
+	padding: 100px 70px 50px 50px; 
 }
 h1 {
-	font-weight: normal; 
-	font-size: 24px; 
-	line-height: 30px; 
-	margin-bottom: 24px;
-}
-h2 {
-	font-weight: normal; 
-	font-size: 20px; 
-	line-height: 30px; 
-	color: #058cd0; 
-	margin: -5px 0 27px; 
-	padding-top: 12px; 
-	border-bottom: dashed 1px;}
-h3 {
-	font-weight: normal; 
-	font-size: 22px; 
-	line-height: 24px; 
+	font-size: 56px; 
 	margin-bottom: 12px;
 }
 p {
-	line-height: 20px; 
-	color: #656565; 
-	text-align: justify;
+	font-size: 20px; 
+	line-height: 30px; 
+	text-align: left;
+}
+.blockImgStartPage{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.thirdPopupBlock{
+    display: flex;
+	flex-direction: column;
+    background-color: rgb(51, 43, 58);
+}
+.formInputDataStartPage{
+	width: 350px;
+}
+.caseFormStartPage{
+	border: none;
+}
+.fieldInput{
+	width: 170px;
+	height: 35px;
+	background-color: rgb(0, 0, 0);
+	border: none;
+	border-bottom: 2px solid rgb(255, 238, 0);
+	color: aliceblue;
+}
+.fieldInput:hover {
+	border-bottom: 2px solid rgb(0, 255, 234);
+}
+.blockInputDataStartPage{
+	margin-top: 10px;
+	display:  flex;
 }
 
-/* transition */
-.btn, .closer, .overlay {
+.rightStartsBlock {
+	padding: 50px 20px 50px 20px; 
+	height: 100%;
+	display: flex;
+	background-color: rgb(0, 0, 0);
+	flex-direction: column;
+	min-width: 400px;
+	width: 40%;
+    background: rgb(241, 238, 16);
+    position: relative;
+    z-index: 1;
+}
+.rightStartsBlock:after {
+	width: 35%;
+	/* background: rgba(131, 150, 175, 0.438); */
+    background: inherit;
+    bottom: 0;
+    content: '';
+    display: flex;
+    height: 120%;
+    left: -85px;
+    position: absolute;
+    /* right: 80px; */
+    transform: skew(-8deg);
+    transform-origin: 100%;
+    z-index: -1;
+}
+h3 {
+	font-weight: normal; 
+	font-size: 36px; 
+	line-height: 24px; 
+	margin-bottom: 12px;
+}
+h4 {
+	font-weight: normal; 
+	font-size: 28px; 
+	line-height: 24px; 
+	margin-bottom: 12px;
+	margin-top: 25px;
+}
+
+.button, .closer, .overlay {
 	transition: all 0.2s;
 }
-
-/* buttons */
-/* .btn-box {
-	overflow: hidden;
-} */
-.btn {
-	height: 36px; 
-	/* display:inline-block;  */
-	font-size: 13px; 
-	line-height: 36px; 
-	color: #fff; 
+.button {
+	width: 125px;
+	height: 40px; 
+	display:inline-block; 
+	font-size: 15px; 
+	/* line-height: 36px;  */
+	color: rgb(0, 0, 0); 
 	font-family: 'Roboto', sans-serif; 
 	/* float: left; */
-	margin: 0 12px 12px 0; 
-	padding: 0 24px; 
+	/* margin: 0;  */
+	/* padding: 0 24px;  */
 	text-decoration:none; 
 	text-transform:uppercase; 
 	text-align:center; 
 	-webkit-border-radius: 6px; 
 	border-radius: 6px; 
 	border:0; 
-	background: transparent; 
-	cursor: pointer;
+	/* background: transparent;  */
+	cursor: alias;
+	border: solid 1px rgb(255, 238, 0); 
+	background: rgba(255, 238, 0, 0.986);
 }
-.btn-default {
-	border: solid 1px #357ebd; 
-	background: #428bca;
+.button:hover {
+	border-color: rgba(92, 86, 0, 0.795); 
+	background: rgb(117, 109, 0);
 }
-.btn-success {
-	border: solid 1px #4cae4c; 
-	background: #5cb85c;
-}
-.btn-default:hover {
-	border-color: #285e8e; 
-	background: #3276b1;
-}
-.btn-success:hover {
-	border-color: #398439; 
-	background: #47a447;
-}
-
-/*--- CONTENT ---*/
-
 .overlay {
 	opacity: 0;
 	visibility: hidden; 
@@ -122,7 +168,7 @@ p {
 	z-index: 110; 
 	background: rgba(0,0,0,0.87);
 }
-.dlg-modal {
+.popupBlockStartPage {
 	width: 576px; 
 	height: 300px; 
 	opacity: 0;
@@ -133,22 +179,24 @@ p {
 	top: 180px; 
 	z-index: 130; 
 	margin-left: -288px; 
-	padding: 47px 36px; 
-	background: #efa200; 
+	/* padding-top: 47px;  */
+	/* padding-bottom: 20px; */
+	background: rgb(0, 0, 0); 
 	-webkit-border-radius: 6px; 
 	border-radius: 6px; 
 	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.85); 
-	box-shadow: 0 0 20px rgba(0,0,0,0.85); 
+	box-shadow: 0 0 20px rgba(187, 178, 178, 0.85); 
 	filter: alpha(opacity=0);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
-
-/* animation */
-.fadeIn, .fadeOut, .slideInDown, .slideOutUp {
+.fadeIn, .fadeOut {
 	-webkit-animation-duration: 0.4s; 
 	animation-duration: 0.4s; 
 	animation-timing-function: ease-out;
 }
-
 @keyframes fadeIn {
 	from {opacity: 0; visibility: hidden;}
 	to {opacity:1; visibility: visible;}
@@ -159,7 +207,6 @@ p {
 	opacity: 1; 
 	visibility: visible;
 }
-
 @keyframes fadeOut {
 	from {opacity: 1; visibility: visible;}
 	to {opacity:0; visibility: hidden;}
@@ -170,8 +217,102 @@ p {
 	opacity: 0; 
 	visibility: hidden;
 }
+.overlay1 {
+	opacity: 0;
+	visibility: hidden; 
+	position:fixed; 
+	left: 0; 
+	right: 0; 
+	top: 0; 
+	bottom: 0; 
+	z-index: 998; 
+	background-size: cover;
+	background-image: 
+	url(https://zerotohero.ir/wp-content/uploads/2016/12/javascript-yellow-cover-1.jpg);
+	/* url(https://www.ma-no.org/cache/galleries/contents-1991/960-400/javascript-impjpg.webp); */
+	/* url(https://codereviewvideos.com/blog/wp-content/uploads/2017/10/javascript-for-php-developers.jpg); */
+	/* url(https://miro.medium.com/max/1200/1*DOfjKmJjWQq68gdZmwukUg.jpeg); */
+}
+.fadeIn1, .fadeOut1 {
+	-webkit-animation-duration: 0.4s; 
+	animation-duration: 0.4s; 
+	animation-timing-function: ease-out;
+}
+@keyframes fadeIn1 {
+	from {opacity: 0; visibility: hidden;}
+	to {opacity:1; visibility: visible;}
+}
+.fadeIn1 {
+	-webkit-animation-name: fadeIn; 
+	animation-name: fadeIn; 
+	opacity: 1; 
+	visibility: visible;
+}
+@keyframes fadeOut1 {
+	from {opacity: 1; visibility: visible;}
+	to {opacity:0; visibility: hidden;}
+}
+.fadeOut1 {
+	-webkit-animation-name: fadeOut; 
+	animation-name: fadeOut; 
+	opacity: 0; 
+	visibility: hidden;
+}
 
-@media screen and (max-width: 800px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .firstPopupBlock{
+    display:  flex;
+    background-color: aqua;
+} */
+
+/* .btn-box {
+	overflow: hidden;
+} */
+/* 
+h2 {
+	font-weight: normal; 
+	font-size: 20px; 
+	color: #058cd0; 
+	margin: -5px 0 27px; 
+	padding-top: 12px; 
+	border-bottom: dashed 1px;
+} */	
+
+/* @media screen and (max-width: 1024px) {
 	.modal-outer {
 		width: 620px; 
 		min-height: auto; 
@@ -181,6 +322,7 @@ p {
 	.modal-outer .dlg-modal {
 		width: 420px;
 	}
+	
 }
 
 @media screen and (max-width: 640px) {
@@ -216,50 +358,4 @@ p {
 		width: 290px; 
 		height: 150px;
 	}
-}
-
-/* button {
-    margin:0 auto;
-    background: #c0c0c098;
-    border: none;
-    border-radius: 6px;
-    padding: 10px 25px;
-    min-width: 20px;
-    text-align: center;
-    font-size: 1.1em;
 } */
-
-.firstPopupBlock{
-    display:  flex;
-    background-color: aqua;
-}
-.hideFirstBlock, .hideSecondBlock, .hideThirdBlock{
-    display:  none;
-
-}
-.secondPopupBlock{
-	width: 100%;
-	height: 100%;
-    display: flex;
-    background-color: rebeccapurple;
-	flex-direction: row;
-	justify-content: center;
-}
-.bl1, .bl2{
-	width: 100%;
-
-	padding: 50px 20px 50px 20px; 
-	height: 100%;
-	display: flex;
-	background-color: rgb(177, 133, 40);
-	flex-direction: column;
-}
-.bl2{
-	background-color: rgb(202, 26, 26);
-
-}
-
-.thirdPopupBlock{
-    display:  flex;
-    background-color: rgb(69, 119, 41);
-}

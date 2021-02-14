@@ -20,8 +20,8 @@ document.getElementById("m3").onclick = function() {
     if(document.getElementById('m3').onclick){ 
         var arr = []; 
         for(var i=0; i < 5; i++) {
-            
-            arr[i] = prompt('Введите любое число '+i);      
+            let r=i+1
+            arr[i] = prompt('Введите любое число '+r);      
             if(arr[i] === null) {                           
                 alert('Отмена');
                 return;

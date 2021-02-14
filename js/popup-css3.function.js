@@ -4,6 +4,7 @@ window.onload = document.getElementById("buttonFormInputDataStartPage").onclick 
 		mOpen	= document.querySelectorAll('input[data-modal="idPopupBlockStartPage"]'),
 		mClose	= document.querySelectorAll('input[data-close="idPopupBlockStartPage"]'),
 		mStatus	= false;
+		
 		if (mOpen.length == 0) return;
 		[].forEach.call(mOpen, function(el) {
 			el.addEventListener('click', function(e) {
@@ -13,6 +14,7 @@ window.onload = document.getElementById("buttonFormInputDataStartPage").onclick 
 			});
 		});
 		document.addEventListener('keydown', modalClose);
+		
 		function modalShow(modal) {
 			overlay.classList.remove('fadeOut');
 			overlay.classList.add('fadeIn');
@@ -20,6 +22,7 @@ window.onload = document.getElementById("buttonFormInputDataStartPage").onclick 
 			modal.classList.add('fadeIn');
 			mStatus = true;
 		}
+		
 		function modalClose(event) {
 			if (mStatus) {
 				var modals = document.querySelectorAll('.popupBlockStartPage');

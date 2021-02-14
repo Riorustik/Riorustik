@@ -29,7 +29,6 @@
 
 	function modalClose(event) {
 		if (mStatus) {
-			// var modals = document.querySelectorAll('.dlg-modal');
 			overlay.classList.remove('fadeIn1');
 			overlay.classList.add('fadeOut1');
 			mStatus = false;

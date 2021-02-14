@@ -3,6 +3,7 @@ const checkLength = function(evt) {
         button.removeAttribute('disabled');
     }
   }
+
 const phoneField = document.querySelector('input[name="name"]')
 const phoneField1 = document.querySelector('input[name="surname"]')
 const button = document.getElementById('buttonFormInputDataStartPage')
@@ -27,9 +28,9 @@ function rf(){
         num1.innerHTML=a+" "+b; 
         var num12 = document.getElementById('blockUp12');       
         num12.innerHTML=a+" "+b; 
-
     }
 }
+
 document.getElementById("buttonFormInputDataStartPage").onclick = function() {
     if(document.getElementById('buttonFormInputDataStartPage').onclick){ 
         sessionStorage.setItem('name', document.getElementById('inputNameFormStartPage').value);

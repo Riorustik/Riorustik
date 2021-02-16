@@ -3,7 +3,6 @@ const checkLength = function(evt) {
         button.removeAttribute('disabled');
     }
   }
-
 const phoneField = document.querySelector('input[name="name"]')
 const phoneField1 = document.querySelector('input[name="surname"]')
 const button = document.getElementById('buttonFormInputDataStartPage')
@@ -24,7 +23,7 @@ function rf(){
         var b = sessionStorage.getItem("surname"); 
         var num = document.getElementById('popupBlockHiStartPage');       
         num.innerHTML=a+" "+b;       
-        var num1 = document.getElementById('blockUp1');       
+        var num1 = document.getElementById('blockUserName');       
         num1.innerHTML=a+" "+b; 
         var num12 = document.getElementById('blockUp12');       
         num12.innerHTML=a+" "+b; 
@@ -39,7 +38,7 @@ document.getElementById("buttonFormInputDataStartPage").onclick = function() {
         var b = sessionStorage.getItem("surname");     
         var num = document.getElementById('popupBlockHiStartPage');       
         num.innerHTML=a+" "+b;       
-        var num1 = document.getElementById('blockUp1');       
+        var num1 = document.getElementById('blockUserName');       
         num1.innerHTML=a+" "+b; 
         var num12 = document.getElementById('blockUp12');       
         num12.innerHTML=a+" "+b;           

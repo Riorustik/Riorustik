@@ -123,26 +123,41 @@ let Timer = {
         }
     }
 }
-
+let go = 0;
+let no = 0;
+let Test = {
+    countDown1() {   
+        go++;
+    },
+    stopDown1() {
+        no++;
+    }
+}
 document.getElementById("r1").onclick = function () {
     if(document.getElementById('r1').onclick){
         document.getElementById("test1").classList.add("testStart"); 
         document.getElementById("test1").classList.remove("test");  
-        document.getElementById("test2").classList.add("test");          
+        document.getElementById("test2").classList.add("test");   
+        console.log(go)
+        console.log(no)       
     }  
 }
 document.getElementById("r2").onclick = function () {
     if(document.getElementById('r2').onclick){
         document.getElementById("test2").classList.add("testStart"); 
         document.getElementById("test2").classList.remove("test");  
-        document.getElementById("test3").classList.add("test");          
+        document.getElementById("test3").classList.add("test");  
+        console.log(go)
+        console.log(no)        
     }  
 }
 document.getElementById("r3").onclick = function () {
     if(document.getElementById('r3').onclick){
         document.getElementById("test3").classList.add("testStart"); 
         document.getElementById("test3").classList.remove("test");  
-        document.getElementById("test4").classList.add("test");          
+        document.getElementById("test4").classList.add("test"); 
+        console.log(go)
+        console.log(no)         
     }  
 }
 document.getElementById("r4").onclick = function () {
@@ -150,41 +165,53 @@ document.getElementById("r4").onclick = function () {
         document.getElementById("test4").classList.add("testStart"); 
         document.getElementById("test4").classList.remove("test");  
         document.getElementById("test5").classList.add("test");          
+        console.log(go)
+        console.log(no)
     }  
 }
 document.getElementById("r5").onclick = function () {
     if(document.getElementById('r5').onclick){
         document.getElementById("test5").classList.add("testStart"); 
         document.getElementById("test5").classList.remove("test");  
-        document.getElementById("test6").classList.add("test");          
+        document.getElementById("test6").classList.add("test"); 
+        console.log(go)
+        console.log(no)         
     }  
 }
 document.getElementById("r6").onclick = function () {
     if(document.getElementById('r6').onclick){
         document.getElementById("test6").classList.add("testStart"); 
         document.getElementById("test6").classList.remove("test");  
-        document.getElementById("test7").classList.add("test");          
+        document.getElementById("test7").classList.add("test"); 
+        console.log(go)
+        console.log(no)         
     }  
 }
 document.getElementById("r7").onclick = function () {
     if(document.getElementById('r7').onclick){
         document.getElementById("test7").classList.add("testStart"); 
         document.getElementById("test7").classList.remove("test");  
-        document.getElementById("test8").classList.add("test");          
+        document.getElementById("test8").classList.add("test");    
+        console.log(go)
+        console.log(no)      
     }  
 }
 document.getElementById("r8").onclick = function () {
     if(document.getElementById('r8').onclick){
         document.getElementById("test8").classList.add("testStart"); 
         document.getElementById("test8").classList.remove("test");  
-        document.getElementById("test9").classList.add("test");          
+        document.getElementById("test9").classList.add("test");  
+        console.log(go)
+        console.log(no)        
     }  
 }
 document.getElementById("r9").onclick = function () {
     if(document.getElementById('r9').onclick){
         document.getElementById("test9").classList.add("testStart"); 
         document.getElementById("test9").classList.remove("test");  
-        document.getElementById("test10").classList.add("test");          
+        document.getElementById("test10").classList.add("test"); 
+        console.log(go)
+        console.log(no)         
     }  
 }
 document.getElementById("r10").onclick = function () {
@@ -195,21 +222,38 @@ document.getElementById("r10").onclick = function () {
         console.log(go);
         console.log(no); 
         var numGo = document.getElementById('ert2');       
-        var numNo = document.getElementById('ert3');       
+        var numNo = document.getElementById('ert3');              
         numGo.innerHTML= go;        
         numNo.innerHTML= no;          
+        var numeric = document.getElementById('ert1231')
+        if(go==10){
+            numeric.innerHTML = "Гуру JS"
+        }        
+        if(go>=8 && go!=10){
+            numeric.innerHTML = "Отличный результат"
+        }
+        if(go>=5 && go<8){
+            numeric.innerHTML = "Ты справился"
+        }
+        if(go<5 && go>3){
+            numeric.innerHTML = "Не олень, но надо подучить"
+        }
+        if(go<=3){
+            numeric.innerHTML = "Наверное JS не твое"
+        }
+
     }  
 }
-
-let go = 0;
-let no = 0;
-let Test = {
-    countDown1() {   
-        go++;
-    },
-    stopDown1() {
-        no++;
-    }
+document.getElementById("r11").onclick = function () {
+    if(document.getElementById('r11').onclick){
+        document.getElementById("test10").classList.add("testStart"); 
+        document.getElementById("test10").classList.remove("test");  
+        document.getElementById("test1").classList.add("test");   
+        go = 0;
+        no = 0;
+        console.log(go)
+        console.log(no)       
+    }  
 }
 
 

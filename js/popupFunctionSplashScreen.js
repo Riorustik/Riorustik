@@ -1,6 +1,6 @@
 ;(function() {
 
-	var overlay	= document.querySelector('.overlay1'),
+	let overlay	= document.querySelector('.overlay1'),
 		mOpen	= document.querySelectorAll('input[data-modal="modal_11"]'),
 		mClose	= document.querySelectorAll('[data-close]'),
 		mStatus	= false;
@@ -9,7 +9,7 @@
 
 	[].forEach.call(mOpen, function(el) {
 		el.addEventListener('click', function(e) {
-			var modalId	= el.getAttribute('data-modal'),
+			let modalId	= el.getAttribute('data-modal'),
 				modal = document.getElementById(modalId);
 
 			modalShow(modal);

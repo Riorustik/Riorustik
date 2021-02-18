@@ -3,7 +3,7 @@ document.getElementById("firstFormThirdInputId").onclick = function() {
         let s1 = document.getElementById('firstFormFirstInputId').value
         let s2 = document.getElementById('firstFormSecondInputId').value
         let s = 1/2*s1*s2;
-        var num = document.getElementById('firstFormFirstPId');       
+        let num = document.getElementById('firstFormFirstPId');       
         num.innerHTML=s; 
     }
 }
@@ -12,14 +12,14 @@ document.getElementById("secondFormThirdInputId").onclick = function() {
         let d1 = document.getElementById('secondFormFirstInputId').value
         let d2 = document.getElementById('secondFormSecondInputId').value
         let d  = d1.length == d2.length;
-        var num = document.getElementById('secondFormFirstPId');       
+        let num = document.getElementById('secondFormFirstPId');       
         num.innerHTML= d; 
     }
 }
 document.getElementById("thirdFormFirstInputId").onclick = function() {
     if(document.getElementById('thirdFormFirstInputId').onclick){ 
-        var arr = []; 
-        for(var i=0; i < 5; i++) {
+        let arr = []; 
+        for(let i=0; i < 5; i++) {
             let r=i+1
             arr[i] = prompt('Введите любое число '+r);      
             if(arr[i] === null) {                           
@@ -51,17 +51,19 @@ function zero_first_format(value)  {
     return value;
 }
 function date_time(){
-    var current_datetime = new Date();
-    var day = zero_first_format(current_datetime.getDate());
-    var month = zero_first_format(current_datetime.getMonth()+1);
-    var year = current_datetime.getFullYear();
-    var hours = zero_first_format(current_datetime.getHours());
-    var minutes = zero_first_format(current_datetime.getMinutes());
-    var seconds = zero_first_format(current_datetime.getSeconds());
+    let current_datetime = new Date();
+    let day = zero_first_format(current_datetime.getDate());
+    let month = zero_first_format(current_datetime.getMonth()+1);
+    let year = current_datetime.getFullYear();
+    let hours = zero_first_format(current_datetime.getHours());
+    let minutes = zero_first_format(current_datetime.getMinutes());
+    let seconds = zero_first_format(current_datetime.getSeconds());
 
     return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
 }
 setInterval(function (){document.getElementById('current').innerHTML = date_time()}, 1000);
+
+
 
 document.getElementById("time").onclick = function(){
         Timer.countDown()
@@ -123,139 +125,84 @@ let Timer = {
         }
     }
 }
+
+const id1 = document.getElementById("r1");
+const id2 = document.getElementById("r2");
+const id3 = document.getElementById("r3");
+const id4 = document.getElementById("r4");
+const id5 = document.getElementById("r5");
+const id6 = document.getElementById("r6");
+const id7 = document.getElementById("r7");
+const id8 = document.getElementById("r8");
+const id9 = document.getElementById("r9");
+const id10 = document.getElementById("r10");
+const id11 = document.getElementById("r11");
+const test1 = document.getElementById("test1");
+const test2 = document.getElementById("test2");
+const test3 = document.getElementById("test3");
+const test4 = document.getElementById("test4");
+const test5 = document.getElementById("test5");
+const test6 = document.getElementById("test6");
+const test7 = document.getElementById("test7");
+const test8 = document.getElementById("test8");
+const test9 = document.getElementById("test9");
+const test10 = document.getElementById("test10");
+const test11 = document.getElementById("test11");
 let go = 0;
 let no = 0;
 let Test = {
     countDown1() {   
         go++;
+
     },
     stopDown1() {
         no++;
     }
 }
-document.getElementById("r1").onclick = function () {
-    if(document.getElementById('r1').onclick){
-        document.getElementById("test1").classList.add("testStart"); 
-        document.getElementById("test1").classList.remove("test");  
-        document.getElementById("test2").classList.add("test");   
-        console.log(go)
-        console.log(no)       
-    }  
-}
-document.getElementById("r2").onclick = function () {
-    if(document.getElementById('r2').onclick){
-        document.getElementById("test2").classList.add("testStart"); 
-        document.getElementById("test2").classList.remove("test");  
-        document.getElementById("test3").classList.add("test");  
-        console.log(go)
-        console.log(no)        
-    }  
-}
-document.getElementById("r3").onclick = function () {
-    if(document.getElementById('r3').onclick){
-        document.getElementById("test3").classList.add("testStart"); 
-        document.getElementById("test3").classList.remove("test");  
-        document.getElementById("test4").classList.add("test"); 
-        console.log(go)
-        console.log(no)         
-    }  
-}
-document.getElementById("r4").onclick = function () {
-    if(document.getElementById('r4').onclick){
-        document.getElementById("test4").classList.add("testStart"); 
-        document.getElementById("test4").classList.remove("test");  
-        document.getElementById("test5").classList.add("test");          
-        console.log(go)
-        console.log(no)
-    }  
-}
-document.getElementById("r5").onclick = function () {
-    if(document.getElementById('r5').onclick){
-        document.getElementById("test5").classList.add("testStart"); 
-        document.getElementById("test5").classList.remove("test");  
-        document.getElementById("test6").classList.add("test"); 
-        console.log(go)
-        console.log(no)         
-    }  
-}
-document.getElementById("r6").onclick = function () {
-    if(document.getElementById('r6').onclick){
-        document.getElementById("test6").classList.add("testStart"); 
-        document.getElementById("test6").classList.remove("test");  
-        document.getElementById("test7").classList.add("test"); 
-        console.log(go)
-        console.log(no)         
-    }  
-}
-document.getElementById("r7").onclick = function () {
-    if(document.getElementById('r7').onclick){
-        document.getElementById("test7").classList.add("testStart"); 
-        document.getElementById("test7").classList.remove("test");  
-        document.getElementById("test8").classList.add("test");    
-        console.log(go)
-        console.log(no)      
-    }  
-}
-document.getElementById("r8").onclick = function () {
-    if(document.getElementById('r8').onclick){
-        document.getElementById("test8").classList.add("testStart"); 
-        document.getElementById("test8").classList.remove("test");  
-        document.getElementById("test9").classList.add("test");  
-        console.log(go)
-        console.log(no)        
-    }  
-}
-document.getElementById("r9").onclick = function () {
-    if(document.getElementById('r9').onclick){
-        document.getElementById("test9").classList.add("testStart"); 
-        document.getElementById("test9").classList.remove("test");  
-        document.getElementById("test10").classList.add("test"); 
-        console.log(go)
-        console.log(no)         
-    }  
-}
-document.getElementById("r10").onclick = function () {
-    if(document.getElementById('r10').onclick){
-        document.getElementById("test10").classList.add("testStart"); 
-        document.getElementById("test10").classList.remove("test");  
-        document.getElementById("test11").classList.add("test");
-        console.log(go);
-        console.log(no); 
-        var numGo = document.getElementById('ert2');       
-        var numNo = document.getElementById('ert3');              
-        numGo.innerHTML= go;        
-        numNo.innerHTML= no;          
-        var numeric = document.getElementById('ert1231')
-        if(go==10){
-            numeric.innerHTML = "Гуру JS"
-        }        
-        if(go>=8 && go!=10){
-            numeric.innerHTML = "Отличный результат"
-        }
-        if(go>=5 && go<8){
-            numeric.innerHTML = "Ты справился"
-        }
-        if(go<5 && go>3){
-            numeric.innerHTML = "Не олень, но надо подучить"
-        }
-        if(go<=3){
-            numeric.innerHTML = "Наверное JS не твое"
-        }
-
-    }  
-}
-document.getElementById("r11").onclick = function () {
-    if(document.getElementById('r11').onclick){
-        document.getElementById("test10").classList.add("testStart"); 
-        document.getElementById("test10").classList.remove("test");  
-        document.getElementById("test1").classList.add("test");   
-        go = 0;
-        no = 0;
-        console.log(go)
-        console.log(no)       
-    }  
+function test(onclickId, testBefo, testAfter){
+    onclickId.onclick = function () {
+        if(onclickId.onclick){
+            testBefo.classList.add("testStart"); 
+            testBefo.classList.remove("test");  
+            testAfter.classList.add("test"); 
+            let numGo = document.getElementById('ert2');       
+            let numNo = document.getElementById('ert3');              
+            numGo.innerHTML= go;        
+            numNo.innerHTML= no;          
+            let numeric = document.getElementById('ert1231')
+            if(go==10){
+                numeric.innerHTML = "Гуру JS"
+            }        
+            if(go>=8 && go!=10){
+                numeric.innerHTML = "Отличный результат"
+            }
+            if(go>=5 && go<8){
+                numeric.innerHTML = "Ты справился"
+            }
+            if(go<5 && go>3){
+                numeric.innerHTML = "Не олень, но надо подучить"
+            }
+            if(go<=3){
+                numeric.innerHTML = "Наверное JS не твое"
+            }
+            if(onclickId == id11){
+                go = 0;
+                no = 0;
+            }       
+        }  
+    }
 }
 
-
+test(id1, test1, test2);
+test(id2, test2, test3);
+test(id3, test3, test4);
+test(id4, test4, test5);
+test(id5, test5, test6);
+test(id6, test6, test7);
+test(id7, test7, test8);
+test(id8, test8, test9);
+test(id9, test9, test10);
+test(id10, test10, test11);
+test(id11, test10, test1);
 
       

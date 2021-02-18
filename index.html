@@ -14,7 +14,7 @@
                     <h1>Руководство по </h1>
                     <br>
                     <h1>JavaScript</h1>
-                    <p style="margin: 30px 100px 0 0px;">Погружение в IT-профессию подразумевает постоянный 
+                    <p class="descripLeftStartsBlock">Погружение в IT-профессию подразумевает постоянный 
                         контакт с изучаемыми технологиями. Цель этого сайта 
                         - предоставить как можно более грамотную и 
                         структурированную информацию о языке JS.
@@ -22,12 +22,14 @@
                         зачем он нужен, для чего его можно использовать,
                         в каких случаях этот язык не подойдет.
                     </p>
-                    <p style="font-size: 12px; margin-top: 40px;">Для продолжения введите:</p>
+                    <p class="indication">Для продолжения введите:</p>
                     <div class="blockInputDataStartPage">
                         <form id="formStartPage" class="formInputDataStartPage" action="#" method="GET" >
                             <fieldset class="caseFormStartPage" form="name" name="userName">
                                 <input id="inputNameFormStartPage" class="fieldInput" type="text" name="name" autocomplete="on" autofocus form="formStartPage" placeholder="Имя" required>
-                                <input id="inputSurnameFormStartPage" class="fieldInput" type="text" name="surname" autocomplete="on" form="formStartPage" placeholder="Фамилия" required > 
+                                <input id="inputSurnameFormStartPage" class="fieldInput" type="text" name="surname" form="formStartPage" placeholder="Фамилия" required > 
+                                <p class="indication"><input id="rgt" onclick="" name="consent" form="formStartPage" type="checkbox" value="" > Согласие на обработку персональных данных</p>
+
                             </fieldset>  
                         </form>
                         <input id="buttonFormInputDataStartPage" type="button" class="button" data-modal="idPopupBlockStartPage" form="formStartPage" value="продолжить" disabled>
@@ -38,7 +40,7 @@
                 </div>
                 <div class="overlay" data-close="idPopupBlockStartPage"></div>
                 <div id="idPopupBlockStartPage" class="popupBlockStartPage">
-                        <h3>Добро подаловать </h3>
+                        <h3>Добро пожаловать </h3>
                         <h4 id="popupBlockHiStartPage"></h4>
                         <button id="popupBlockButtonStartPage" type="button" class="button" style="margin-top: 70px">продолжить</button>
                 </div>    
@@ -48,7 +50,7 @@
         <header>
             <div class="allHeader">
                 <div class="staticHeader">
-                    <div class="headerBlockUser headerBlockUserFirst"><img src="img/jsIcon.png" alt="" width="10%"></div>
+                    <div class="headerBlockUser headerBlockUserFirst"><img src="img/jsIcon.png" alt=""></div>
                     <div class="headerBlockUser headerBlockUserSecond">Пользователь:<span id="blockUserName"></span></div>
                 </div>
                 <div class="posters posterFirst"></div>
@@ -219,7 +221,7 @@
                         </div>
                         <div>
                             <form class="formThirdTaskCl" action="#" id="formThirdTask">
-                                <input id="thirdFormFirstInputId" class="button" type="button" form="formThirdTask" value="вести массив">
+                                <input id="thirdFormFirstInputId" class="button" type="button" form="formThirdTask" value="ввести массив">
                                 <div class="blockFormThirdOutput">
                                     <p>Наибольщий элемент массива:
                                         <span id="thirdFormFirstSpanId" ></span>

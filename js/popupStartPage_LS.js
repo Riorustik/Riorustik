@@ -1,20 +1,24 @@
-const checkLength = function() {   
-    if (phoneField.value.length > 1 && phoneField1.value.length > 1 && r==true) {
-            console.log(r);
-            button.removeAttribute('disabled');
-    }
-}
+let r=false;
 const phoneField = document.querySelector('input[name="name"]')
 const phoneField1 = document.querySelector('input[name="surname"]')
-const button = document.getElementById('buttonFormInputDataStartPage')
-const d = document.getElementById('rgt');
-phoneField.addEventListener('keyup', checkLength);
-phoneField1.addEventListener('keyup', checkLength);
-d.addEventListener('click', checkLength);
-let r=false;
-let t = document.getElementById('rgt').onclick = function(){
-    r=true;
+const button = document.getElementById('buttonFormInputDataStartPage');
+
+function ert() {   
+    if (phoneField.value.length > 1 && phoneField1.value.length > 1 && r==true) 
+        button.removeAttribute('disabled');
+    else
+        button.setAttribute('disabled', 'disabled');
 }
+
+document.getElementById('rgt').onclick = function(){
+    if(r==true)
+        r=false;
+    else
+        r=true ;
+    console.log(r);
+    ert();
+}
+
 function rf(){  
     if(sessionStorage.getItem("most1")!==null){
         let text1 = sessionStorage.getItem("most1");

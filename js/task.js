@@ -165,6 +165,7 @@ function test(onclickId, testBefo, testAfter){
             testBefo.classList.add("testStart"); 
             testBefo.classList.remove("test");  
             testAfter.classList.add("test"); 
+
             let numGo = document.getElementById('ert2');       
             let numNo = document.getElementById('ert3');              
             numGo.innerHTML= go;        
@@ -203,6 +204,6 @@ test(id7, test7, test8);
 test(id8, test8, test9);
 test(id9, test9, test10);
 test(id10, test10, test11);
-test(id11, test10, test1);
+test(id11, test11, test1);
 
       

@@ -11,7 +11,7 @@ function ert() {
 }
 
 document.getElementById('rgt').onclick = function(){
-    if(r==true)
+    if(r)
         r=false;
     else
         r=true ;

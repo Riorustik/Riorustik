@@ -39,10 +39,7 @@ document.getElementById("thirdFormFirstInputId").onclick = function() {
         num1.innerHTML= mr;
     }
 }
-       // <script type="text/javascript">
-    
-        /* функция добавления ведущих нулей */
-        /* (если число меньше десяти, перед числом добавляем ноль) */
+
 function zero_first_format(value)  {
     if (value < 10)
     {

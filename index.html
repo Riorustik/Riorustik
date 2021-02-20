@@ -177,8 +177,8 @@
                             <p class="dataInputText">Введите основание и высоту треугольника:</p>
                             <form action="#" id="formFirstTask" >
                                 <div class="blockFirstFormInput">                               
-                                    <input id="firstFormFirstInputId" type="text" placeholder="Основание" required form="formFirstTask">
-                                    <input id="firstFormSecondInputId" type="text" placeholder="Высота" required form="formFirstTask">
+                                    <input id="firstFormFirstInputId" type="number" placeholder="Основание" required form="formFirstTask">
+                                    <input id="firstFormSecondInputId" type="number" placeholder="Высота" required form="formFirstTask">
                                 </div> 
                                 <div class="blockFirstFormOutput">
                                     <input id="firstFormThirdInputId" class="button" type="button" form="formFirstTask" value="вычилить" >
@@ -249,7 +249,8 @@
                             <input class="taimerInput button" type="button" id="time" value="start" onclick="">
                             <input class="taimerInput button" type="button" id="time1" value="stop" onclick="">
                             <input class="taimerInput button" type="button" id="time2" value="restart" onclick="">
-                            <div id="clock"></div>
+                            <div id="clock">00:00:00</div>
+                            <div>Время с начала последнего старта <span id="clock1"></span></div>
                         </div>
                     </div>
                 </div>

@@ -76,7 +76,10 @@ let min = 0;
 let hour = 0;
 let timer;
 let time = document.getElementById('clock');
-
+let res = document.getElementById('clock1');
+let timeSec = 0,
+    timeMin = 0,
+    timeHout = 0;
 let Timer = {
     countDown() {   
         ++sec;
@@ -103,14 +106,48 @@ let Timer = {
     },
     stopDown() {
         if(timer) {
-            clearTimeout(timer);
+            clearInterval(timer)
             timer=null;
+            
+            if(timeSec == 0){
+                timeSec = sec;
+                timeSecAll = timeSec
+            }
+            else{
+                timeSecAll = sec - timeSec;
+                timeSec = sec
+            }
+
+            if(timeMin == 0){
+                timeMin = min;
+                timeMinAll = timeMin
+            }
+            else{
+                timeMinAll = min - timeMin;
+                timeMin = min
+            }
+
+            if(timeHout == 0){
+                timeHout = hour;
+                timeHoutAll = timeHout
+            }
+            else{
+                timeHoutAll = hour - timeHout;
+                timeHout = hour
+            }
+            res.innerHTML =  timeHoutAll + ':' + timeMinAll + ':' +  timeSecAll;
+            timeSecAll = 0;
+            timeMinAll = 0;
+            timeHoutAll = 0;
         }
     },
     startOver(){
         sec = 0;
         min = 0; 
         hour = 0;
+        timeSec = 0;
+        timeMin = 0;
+        timeHout = 0;
         if(timer || !timer) {
             clearInterval(timer);
             timer = null;
@@ -119,6 +156,7 @@ let Timer = {
             m = '0' + min;
             h = '0' + hour;
             time.innerHTML = h + ':' + m + ':' + s;
+            res.innerHTML =  timeHout + ':' + timeMin + ':' +  timeSec;
         }
     }
 }

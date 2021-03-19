@@ -98,7 +98,7 @@ let Timer = {
             if(hour < 10) h = '0' + hour;
             else h = hour;
         time.innerHTML = h + ':' + m + ':' + s;
-        timer = setTimeout("Timer.countDown()", 1000);
+        timer = setTimeout("Timer.countDown()", 5000);
     },
     startDown() {
     if(!timer)
